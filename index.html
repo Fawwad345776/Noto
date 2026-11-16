@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOTO Restaurant | Fine Dining in KDA Scheme 1, Karachi</title>
+<meta name="description" content="NOTO Restaurant, KDA Scheme 1, Karachi — steaks, sushi and pasta in an elegant setting. Open daily 6 PM – 2 AM. Reserve a table: 0331 8222244.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1a17'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='56' text-anchor='middle' fill='%23c9a96e'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1412; --bg2:#111c19; --card:#15221e; --line:#24332e;
+    --gold:#c9a96e; --gold2:#e3cc9b; --ivory:#f3ede2; --muted:#9aa59f; --green:#25D366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;font-weight:300;background:var(--bg);color:var(--ivory);line-height:1.7}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+  nav{position:fixed;inset:0 0 auto 0;z-index:20;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(12,20,18,.92);backdrop-filter:blur(10px);border-color:var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:"Cormorant Garamond",serif;font-size:1.9rem;letter-spacing:.35em;text-decoration:none;color:var(--gold2);font-weight:600}
+  .links{display:flex;gap:30px;align-items:center}
+  .links a{text-decoration:none;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+  .links a:hover{color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:background .2s,color .2s;cursor:pointer;font-family:inherit}
+  .btn-gold{background:var(--gold);color:#0c1412}
+  .btn-gold:hover{background:var(--gold2)}
+  .btn-ghost{color:var(--gold2);background:transparent}
+  .btn-ghost:hover{background:rgba(201,169,110,.12)}
+  .nav-cta{padding:10px 18px}
+  @media(max-width:800px){.links a:not(.btn){display:none}}
+
+  /* hero */
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 110%, rgba(201,169,110,.22), transparent 55%),
+      radial-gradient(circle at 15% 20%, rgba(36,70,58,.6), transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(36,70,58,.45), transparent 40%), var(--bg)}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(227,204,155,.5) 1px, transparent 1.5px);background-size:46px 46px;opacity:.07}
+  .hero .wrap{position:relative;padding-top:90px;padding-bottom:60px}
+  .kicker{color:var(--gold);letter-spacing:.4em;text-transform:uppercase;font-size:.75rem;font-weight:500}
+  .hero h1{font-size:clamp(4.5rem,16vw,10rem);letter-spacing:.18em;color:var(--gold2);margin:18px 0 6px;padding-left:.18em}
+  .hero .tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--ivory)}
+  .divider{width:90px;height:1px;background:var(--gold);margin:30px auto;position:relative}
+  .divider::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border:1px solid var(--gold);background:var(--bg);transform:translate(-50%,-50%) rotate(45deg)}
+  .hero p.lead{max-width:540px;margin:0 auto 36px;color:var(--muted)}
+  .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .facts{display:flex;gap:46px;justify-content:center;margin-top:56px;flex-wrap:wrap}
+  .facts b{display:block;font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--gold2);font-weight:500}
+  .facts small{color:var(--muted);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+
+  section{padding:110px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 60px}
+  .head h2{font-size:clamp(2.4rem,5vw,3.6rem);margin:12px 0 14px}
+  .head p{color:var(--muted)}
+
+  /* experience */
+  .exp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .exp div{border:1px solid var(--line);padding:38px 30px;background:linear-gradient(180deg,var(--card),transparent)}
+  .exp .n{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:1rem;letter-spacing:.2em}
+  .exp h3{font-size:1.9rem;margin:10px 0 10px}
+  .exp p{color:var(--muted);font-size:.95rem}
+  @media(max-width:860px){.exp{grid-template-columns:1fr}}
+
+  /* menu */
+  #menu{background:var(--bg2)}
+  .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .dish{position:relative;border:1px solid var(--line);padding:34px 28px 30px;text-align:center;background:var(--bg)}
+  .dish .ic{width:74px;height:74px;margin:0 auto 18px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+  .dish .ic svg{width:36px;height:36px;stroke:var(--gold2);fill:none;stroke-width:1.4}
+  .dish h3{font-size:2rem;margin-bottom:8px}
+  .dish p{color:var(--muted);font-size:.93rem}
+  .menu-note{text-align:center;margin-top:44px;color:var(--muted)}
+  .menu-note a{color:var(--gold2)}
+  @media(max-width:860px){.menu{grid-template-columns:1fr}}
+
+  /* reserve */
+  .reserve{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .reserve h2{font-size:clamp(2.4rem,5vw,3.4rem);margin:12px 0 16px}
+  .reserve p{color:var(--muted)}
+  form{border:1px solid var(--gold);padding:34px;background:var(--card)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:16px;border-radius:0;color-scheme:dark}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  form .btn{width:100%;justify-content:center;background:var(--green);border-color:var(--green);color:#fff}
+  @media(max-width:860px){.reserve{grid-template-columns:1fr}}
+
+  /* visit */
+  #visit{background:var(--bg2)}
+  .visit{display:grid;grid-template-columns:1fr 1.3fr;gap:30px}
+  .info{border:1px solid var(--line);padding:36px;background:var(--bg)}
+  .info h3{font-size:1.6rem;color:var(--gold2);margin-bottom:4px}
+  .info p,.info a{color:var(--muted);text-decoration:none}
+  .info .blk{padding:18px 0;border-bottom:1px solid var(--line)}
+  .info .blk:last-of-type{border:none}
+  .status{display:inline-block;margin-top:8px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border:1px solid}
+  .map{border:1px solid var(--line);min-height:420px}
+  .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.5) invert(.9) hue-rotate(180deg) contrast(.9)}
+  @media(max-width:860px){.visit{grid-template-columns:1fr}}
+
+  footer{padding:46px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+  footer .logo{display:inline-block;margin-bottom:10px}
+
+  .fab{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.4);z-index:30}
+  .fab svg{width:30px;height:30px;fill:#fff}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:480px){.logo{font-size:1.5rem}.facts{gap:28px}.grid2{grid-template-columns:1fr}form{padding:24px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#" class="logo">NOTO</a>
+    <div class="links">
+      <a href="#experience">Experience</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a href="#reserve" class="btn btn-gold nav-cta">Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Restaurant · Karachi</span>
+    <h1>NOTO</h1>
+    <div class="tagline">Dinner, done beautifully.</div>
+    <div class="divider"></div>
+    <p class="lead">Steaks, sushi and pasta in an elegant setting — for date nights, family dinners and celebrations worth remembering.</p>
+    <div class="ctas">
+      <a href="#reserve" class="btn btn-gold">Reserve a Table</a>
+      <a href="#menu" class="btn btn-ghost">Explore Menu</a>
+    </div>
+    <div class="facts">
+      <div><b>4.5 ★</b><small>Google · 350+ reviews</small></div>
+      <div><b>6 PM – 2 AM</b><small>Open every night</small></div>
+      <div><b>KDA Scheme 1</b><small>Karachi</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">The Experience</span>
+      <h2>More than a meal</h2>
+      <p>Every evening at NOTO is about the details — the plate, the light, the company.</p>
+    </div>
+    <div class="exp">
+      <div class="reveal"><span class="n">01</span><h3>Ambience</h3><p>A warm, elegant dining room made for slow dinners and good conversation.</p></div>
+      <div class="reveal"><span class="n">02</span><h3>Celebrations</h3><p>Birthdays, anniversaries and family get-togethers — tell us the occasion and we'll set the table for it.</p></div>
+      <div class="reveal"><span class="n">03</span><h3>Late Nights</h3><p>Open till 2 AM every night, so dinner never has to be rushed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">The Menu</span>
+      <h2>Signature dishes</h2>
+      <p>A focused menu, cooked with care.</p>
+    </div>
+    <div class="menu">
+      <div class="dish reveal">
+        <div class="ic"><svg viewBox="0 0 40 40"><path d="M6 24c0-8 7-14 16-14s12 5 12 11-6 11-14 11S6 30 6 24z"/><path d="M14 20c3-3 8-3 11 0"/><circle cx="26" cy="24" r="2.5"/></svg></div>
+        <h3>Steaks</h3><p>Grilled to order and plated with signature sauces — including our chicken orange steak.</p>
+      </div>
+      <div class="dish reveal">
+        <div class="ic"><svg viewBox="0 0 40 40"><ellipse cx="20" cy="24" rx="13" ry="7"/><path d="M7 24v-4c0-4 6-7 13-7s13 3 13 7v4"/><path d="M12 16c2 2 5 3 8 3s6-1 8-3"/></svg></div>
+        <h3>Sushi</h3><p>Fresh sushi rolls, prepared to order.</p>
+      </div>
+      <div class="dish reveal">
+        <div class="ic"><svg viewBox="0 0 40 40"><path d="M6 22h28c0 7-6 11-14 11S6 29 6 22z"/><path d="M12 22c0-6 2-12 6-14M18 22c0-5 2-10 6-12M24 22c0-4 2-8 5-9"/></svg></div>
+        <h3>Pasta</h3><p>Creamy, rich and comforting — Italian-style pasta, cooked to order.</p>
+      </div>
+    </div>
+    <p class="menu-note reveal">Full menu & prices available on request — <a href="https://wa.me/923318222244?text=Hi%2C%20could%20you%20please%20share%20the%20NOTO%20menu%3F" target="_blank" rel="noopener">ask us on WhatsApp</a>.</p>
+  </div>
+</section>
+
+<section id="reserve">
+  <div class="wrap reserve">
+    <div class="reveal">
+      <span class="kicker">Reservations</span>
+      <h2>Book your table</h2>
+      <p>Fill in the details and send them straight to us on WhatsApp. We'll confirm your reservation shortly. For groups and celebrations, please book a day in advance.</p>
+      <div class="divider" style="margin:30px 0"></div>
+      <p>Prefer to call? <a href="tel:+923318222244" style="color:var(--gold2)">0331 8222244</a></p>
+    </div>
+    <form id="rform" class="reveal">
+      <label for="rname">Name</label>
+      <input id="rname" required placeholder="Your name">
+      <div class="grid2">
+        <div><label for="rdate">Date</label><input id="rdate" type="date" required></div>
+        <div><label for="rtime">Time</label>
+          <select id="rtime"><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option selected>9:00 PM</option><option>10:00 PM</option><option>11:00 PM</option><option>12:00 AM</option><option>1:00 AM</option></select></div>
+      </div>
+      <div class="grid2">
+        <div><label for="rguests">Guests</label><select id="rguests"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>8</option><option>10+</option></select></div>
+        <div><label for="rocc">Occasion</label><select id="rocc"><option>Dinner</option><option>Birthday</option><option>Anniversary</option><option>Family</option><option>Business</option></select></div>
+      </div>
+      <label for="rnote">Note (optional)</label>
+      <textarea id="rnote" rows="2" placeholder="Any special request"></textarea>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head reveal"><span class="kicker">Visit</span><h2>Find us</h2></div>
+    <div class="visit">
+      <div class="info reveal">
+        <div class="blk"><h3>Address</h3><p>KDA Scheme 1, Karachi</p></div>
+        <div class="blk"><h3>Hours</h3><p>Every day · 6:00 PM – 2:00 AM</p><span class="status" id="status"></span></div>
+        <div class="blk"><h3>Reservations</h3><a href="tel:+923318222244">0331 8222244</a></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+          <a href="tel:+923318222244" class="btn btn-gold">Call</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=24.8824375,67.0906875" target="_blank" rel="noopener" class="btn btn-ghost">Directions</a>
+        </div>
+      </div>
+      <div class="map reveal"><iframe loading="lazy" title="NOTO Restaurant map" src="https://maps.google.com/maps?q=24.8824375,67.0906875&z=16&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="logo">NOTO</a>
+  <div>© <span id="yr"></span> NOTO Restaurant, Karachi · Website by MF Soft</div>
+</footer>
+
+<a class="fab" href="https://wa.me/923318222244" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // open status (Karachi time, 18:00–02:00)
+  (function(){
+    const h = Number(new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Asia/Karachi'}).format(new Date())) % 24;
+    const open = h >= 18 || h < 2;
+    const el = document.getElementById('status');
+    el.textContent = open ? 'Open now' : 'Opens at 6 PM';
+    el.style.color = el.style.borderColor = open ? '#7fd49b' : '#c9a96e';
+  })();
+
+  // reservation date default + WhatsApp send
+  const d = document.getElementById('rdate');
+  const t = new Date(); d.min = t.toISOString().slice(0,10); d.value = d.min;
+  document.getElementById('rform').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const date = new Date(v('rdate') + 'T00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+    let msg = `Hi NOTO, I'd like to reserve a table.\n\nName: ${v('rname')}\nDate: ${date}\nTime: ${v('rtime')}\nGuests: ${v('rguests')}\nOccasion: ${v('rocc')}`;
+    if (v('rnote')) msg += `\nNote: ${v('rnote')}`;
+    window.open('https://wa.me/923318222244?text=' + encodeURIComponent(msg), '_blank');
+  });
+
+  const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
