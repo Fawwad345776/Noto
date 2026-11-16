@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NOTO Restaurant | Fine Dining in KDA Scheme 1, Karachi</title>
 <meta name="description" content="NOTO Restaurant, KDA Scheme 1, Karachi — steaks, pan-Asian dishes and pasta in an elegant setting. Open daily 6 PM – 2 AM. Reserve a table: 0331 8222244.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1a17'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='56' text-anchor='middle' fill='%23c9a96e'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231e3fa8'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='56' text-anchor='middle' fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0c1412; --bg2:#111c19; --card:#15221e; --line:#24332e;
-    --gold:#c9a96e; --gold2:#e3cc9b; --ivory:#f3ede2; --muted:#9aa59f; --green:#25D366;
+    --bg:#ffffff; --bg2:#f3f6fd; --card:#ffffff; --line:#dde3f1;
+    --gold:#d4a24c; --gold2:#1e3fa8; --ivory:#16203d; --muted:#5a6580; --blue:#1e3fa8; --blue2:#2f5fe0; --green:#25D366;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -94,7 +94,7 @@
   form{border:1px solid var(--gold);padding:34px;background:var(--card)}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:500}
-  input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:16px;border-radius:0;color-scheme:dark}
+  input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:16px;border-radius:0;color-scheme:light}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
   form .btn{width:100%;justify-content:center;background:var(--green);border-color:var(--green);color:#fff}
   @media(max-width:860px){.reserve{grid-template-columns:1fr}}
@@ -109,7 +109,7 @@
   .info .blk:last-of-type{border:none}
   .status{display:inline-block;margin-top:8px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border:1px solid}
   .map{border:1px solid var(--line);min-height:420px}
-  .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.5) invert(.9) hue-rotate(180deg) contrast(.9)}
+  .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:none}
   @media(max-width:860px){.visit{grid-template-columns:1fr}}
 
   footer{padding:46px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
@@ -120,6 +120,46 @@
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
   .reveal.in{opacity:1;transform:none}
   @media(max-width:480px){.logo{font-size:1.5rem}.facts{gap:28px}.grid2{grid-template-columns:1fr}form{padding:24px}}
+
+  /* bright theme overrides */
+  .hero{background:
+      radial-gradient(circle at 80% 15%, rgba(120,170,255,.55), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(212,162,76,.35), transparent 45%),
+      linear-gradient(135deg,#1a3594 0%,#2550d0 55%,#1c3ba6 100%)}
+  .hero::before{background-image:radial-gradient(rgba(255,255,255,.7) 1px, transparent 1.5px);opacity:.12}
+  .hero h1{color:#fff;text-shadow:0 10px 40px rgba(0,0,0,.25)}
+  .hero .tagline{color:#ffe7b3}
+  .hero .kicker{color:#ffd88a}
+  .hero p.lead{color:#dfe7ff}
+  .hero .divider{background:#ffd88a}
+  .hero .divider::after{background:#2448c0;border-color:#ffd88a}
+  .hero .btn-ghost{color:#fff;border-color:#fff}
+  .hero .btn-ghost:hover{background:rgba(255,255,255,.15)}
+  .facts b{color:#fff}
+  .facts small{color:#c9d6ff}
+  .btn-gold{background:var(--gold);border-color:var(--gold);color:#fff}
+  .btn-gold:hover{background:#e3b45c}
+  nav .logo{color:#fff}
+  nav .links a:not(.btn){color:#fff}
+  nav.solid{background:rgba(255,255,255,.95);border-color:var(--line);box-shadow:0 4px 20px rgba(20,40,100,.08)}
+  nav.solid .logo{color:var(--blue)}
+  nav.solid .links a:not(.btn){color:var(--ivory)}
+  .kicker{color:var(--gold)}
+  .head h2,.exp h3,.dish h3,.reserve h2{color:var(--blue)}
+  .exp div{background:#fff;box-shadow:0 10px 30px rgba(30,63,168,.07);border-color:var(--line);border-top:3px solid var(--gold)}
+  .dish{box-shadow:0 10px 30px rgba(30,63,168,.07)}
+  .dish .ic{background:linear-gradient(135deg,var(--blue),var(--blue2));border:none}
+  .dish .ic svg{stroke:#fff}
+  .mc h3{color:var(--blue);border-color:var(--gold)}
+  .mi i{border-color:#c9d1e6}
+  .mi b{color:#b07d22;font-weight:600}
+  form{background:#fff;box-shadow:0 20px 50px rgba(30,63,168,.12)}
+  label{color:var(--blue)}
+  input,select,textarea{background:#f7f9fe}
+  .info{box-shadow:0 10px 30px rgba(30,63,168,.07)}
+  .info h3{color:var(--blue)}
+  footer{background:linear-gradient(135deg,#1a3594,#2550d0);color:#dfe7ff;border:none}
+  footer .logo{color:#fff}
 </style>
 </head>
 <body>
@@ -262,7 +302,7 @@
     const open = h >= 18 || h < 2;
     const el = document.getElementById('status');
     el.textContent = open ? 'Open now' : 'Opens at 6 PM';
-    el.style.color = el.style.borderColor = open ? '#7fd49b' : '#c9a96e';
+    el.style.color = el.style.borderColor = open ? '#1a9a4b' : '#b07d22';
   })();
 
   // reservation date default + WhatsApp send
